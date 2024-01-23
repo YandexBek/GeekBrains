@@ -8,17 +8,32 @@
     }
     return arr;
 }
-void EvenParity(int[] arr)
+
+int CountEvenElements(int[] arr)
 {
-    Console.Write("чётные:");
-    for (int i = 0; i < arr.Length; i++)
+    int count = 0;
+    foreach(int e in arr)
     {
-        if (arr[i] % 2 == 0)
+        if(e % 2 == 0)
         {
-            Console.Write($"{arr[i]} ");
+            count++;
         }
     }
+    return count;
 }
+
+// void PrintEvenElements(int[] arr)
+// {
+//     Console.Write("чётные:");
+//     for (int i = 0; i < arr.Length; i++)
+//     {
+//         if (arr[i] % 2 == 0)
+//         {
+//             Console.Write($"{arr[i]} ");
+//         }
+//     }
+// }
+
 void PrintArray(int[] arr)
 {
     Console.Write("массив:");
@@ -30,5 +45,7 @@ void PrintArray(int[] arr)
 Console.WriteLine("size:");
 int n = Int32.Parse(Console.ReadLine());
 int[] arr = CreateArray(n);
-EvenParity(arr);
+//PrintEvenElements(arr);
+int count = CountEvenElements(arr);
 PrintArray(arr);
+Console.Write(count);
