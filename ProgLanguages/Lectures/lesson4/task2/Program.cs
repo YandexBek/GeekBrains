@@ -17,13 +17,13 @@ int[,] matrix = CreateMatrix(3, 4);
 
 foreach (int e in matrix)
 {
-    if(interesting(e) == true)
+    if(IsInteresting(e) == true)
     {
         Console.WriteLine(e);
     }
 }
 
-bool interesting(int value)
+bool IsInteresting(int value)
 {
     int sumOfDigits = GetSumOfDigits(value);
     if(sumOfDigits % 2 == 0)
